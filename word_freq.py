@@ -35,7 +35,7 @@ exclude_words = {
 	"平时":0,"一共":0,"我会":0,"一周":0,"那个":0,"有点":0,"不管":0,"不到":0,"经常":0,"等等":0
 	}
 
-sensitive = ['陈琦','陈圣元','微臣']
+sensitive = ['陈琦','陈圣元','微臣',"红宝书","机经","OG","再要你命","3000","36套"]
 
 def jieba_process():
 
@@ -48,9 +48,9 @@ def jieba_process():
 				washed_words.remove(word)
 
 		c = Counter(washed_words)
-		for i in c.most_common(70):
-			word,freq = i 
-			print(word,freq)
+		# for i in c.most_common(70):
+		# 	word,freq = i 
+		# 	print(word,freq)
 
 		for j in sensitive:
 			print(j,c[j])
